@@ -1,8 +1,27 @@
-// Assignment Code
+//Define your variables
+
+var upperCase= "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var lowerCase= "abcdefghijklmnopqrstuvwxyz";
+var specialChar= "!@#$%^&*_-=+";
+var number= "0123456789"
+
+//Assignment Code
 var generateBtn = document.querySelector("#generate");
+
 
 // Write password to the #password input
 function writePassword() {
+  var result="";
+  var passwordLength= window.prompt ("Select Password from between 8-128 characters. How many would you like yours to contain?");
+  if (passwordLength<8) {
+    window.alert ("password less than 8 characters!");
+    writePassword();
+    return"";
+  }
+
+  else if (passwordLength>128){
+    window.alert ("password cannot be longer than 128 characters");
+  }
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
