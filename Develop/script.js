@@ -35,10 +35,33 @@ function writePassword() {
       passwordChar+=upperCase;
       console.log (upper);
     }
+  
+  //lowercase setup
+
+  var lower= window.confirm ("Do you want lower case letters?");
+    if (lower){
+      passwordChar+=lowerCase;
+      console.log (lower);
+    }
+
+  //special characters
 
 
+  var special= window.confirm ("Do you want lower case letters?");
+    if (special){
+      passwordChar+=specialChar;
+      console.log (special);
+    }
 
+    // password for loop
 
+    for (var i = 0; i <passwordLength; i++){
+      var randomNumber=Math.floor(Math.random()*passwordChar.length);
+      result+=passwordChar[randomNumber];
+      console.log (passwordChar[randomNumber]);
+    }
+
+    
 
  /* var password = generatePassword();
   var passwordText = document.querySelector("#password");
