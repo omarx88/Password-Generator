@@ -29,7 +29,6 @@ function writePassword() {
   console.log (passwordLength);
 
   //Rules for Password setup
-
   var upper= window.confirm ("Do you want upper case letters?");
     if (upper) {
       passwordChar+=upperCase;
@@ -37,32 +36,34 @@ function writePassword() {
     }
   
   //lowercase setup
-
   var lower= window.confirm ("Do you want lower case letters?");
     if (lower){
       passwordChar+=lowerCase;
       console.log (lower);
     }
-
+  
+  //number setup
+  var numbers= window.confirm ("Do you want to include numbers?");
+  if (numbers){
+    passwordChar+=number;
+    console.log (numbers);
+  }
+  
   //special characters
-
-
-  var special= window.confirm ("Do you want lower case letters?");
+  var special= window.confirm ("Do you want to include special characters?");
     if (special){
       passwordChar+=specialChar;
       console.log (special);
     }
 
-    // password for loop
-
-    for (var i = 0; i <passwordLength; i++){
-      var randomNumber=Math.floor(Math.random()*passwordChar.length);
+  // password for loop
+  for (var i = 0; i <passwordLength; i++){
+    var randomNumber=Math.floor(Math.random()*passwordChar.length);
       result+=passwordChar[randomNumber];
       console.log (passwordChar[randomNumber]);
     }
 
 //Password generation
-
   var password = result;
   var passwordText = document.querySelector("#password");
 
