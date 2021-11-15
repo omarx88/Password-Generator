@@ -59,12 +59,12 @@ function writePassword() {
   // password for loop
   for (var i = 0; i <passwordLength; i++){
     var randomNumber=Math.floor(Math.random()*passwordChar.length);
-      finalResult+=passwordChar[randomNumber];
+      result+=passwordChar[randomNumber];
       console.log (passwordChar[randomNumber]);
     }
 
 //Password generation
-  var password = finalResult;
+  var password = result;
   var passwordText = document.querySelector("#password");
 
   passwordText.innerHTML = password;
